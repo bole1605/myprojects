@@ -3,7 +3,7 @@
 // Deshalb tragen die Cache-Namen den Pfad der App, und dieser Service Worker löscht NUR eigene Caches – nie die anderer Apps.
 const SCOPE = new URL(self.registration.scope).pathname.replace(/\W+/g, '_');
 const PREFIX = 'pushups' + SCOPE + '-';
-const CACHE = PREFIX + 'v6';
+const CACHE = PREFIX + 'v7';
 const LEGACY = ['pushups-v5'];   // Cache-Name der früheren Version (aus dem alten Repository)
 const ASSETS = ['./', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/home-icon-180.png'];

@@ -235,7 +235,8 @@ dialog .list-title:first-of-type{margin-top:4px}
   main{padding-left:calc(32px + 0px);padding-right:calc(32px + var(--sar))}
   .view>*{max-width:640px}
   .view>.kpis,.view>.card,.view>#day-detail{max-width:760px}
-  .tap{width:min(52dvh,380px)}
+  /* Zählbutton: passt sich der sichtbaren Höhe an (im Browser-Tab ist sie kleiner als im Vollbild) und sitzt mittig in der Spalte der übrigen Elemente (max. 640 px) */
+  .tap{--tapw:clamp(200px,calc(100dvh - 360px),380px);width:var(--tapw);margin:8px 0 14px max(0px,calc((min(640px,100%) - var(--tapw))/2))}
   .kpis{grid-template-columns:repeat(4,1fr)}
   .nav-title{opacity:0!important}
 }
